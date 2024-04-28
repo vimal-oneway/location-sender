@@ -1,0 +1,3 @@
+
+ LOG  {"coords": {"accuracy": 600, "altitude": 0, "altitudeAccuracy": 0, "heading": 0, "latitude": 37.4220936, "longitude": -122.083922, "speed": 0}, 
+"mocked": false, "timestamp": 1714285323515}

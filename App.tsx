@@ -44,9 +44,11 @@ export default function App() {
     }
 
     const location = await Location.getCurrentPositionAsync({});
-    const gmapUrl = `http://maps.google.com/maps?z=12&t=m&q=loc:${location.coords.latitude}+${location.coords.longitude}`;
+    const gmapUrl = `https://maps.google.com/maps?z=12&t=m&q=loc:${location.coords.latitude}+${location.coords.longitude}`;
 
-    const message = `Your friend location is ${gmapUrl}`;
+    const message = encodeURIComponent(
+      `Your friend location is ${gmapUrl}. click above link`,
+    );
 
     const link = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${message}`;
     WebBrowser.openBrowserAsync(link);
